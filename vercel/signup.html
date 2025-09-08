@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer - Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div class="image">
+      <img src="signin4.jpg" alt="background image">
+
+      <div class="heading">
+        <h2><b>Registration</b></h2>
+        <div class="form-container">
+          <div class="input-group">
+            <input type="text" placeholder="First Name " id="firstname">
+            <small class="error-message" id="firstname-error" style="color:red"></small>
+          </div>
+
+          <div class="input-group">
+            <input type="text" placeholder="Second Name " id="secondname">
+            <small class="error-message" id="secondname-error" style="color:red"></small>
+          </div>
+
+          <div class="input-group">
+            <input type="email" placeholder="Email " id="email">
+            <small class="error-message" id="email-error" style="color:red"></small>
+          </div>
+
+          <div class="input-group">
+            <input type="password" placeholder="Password " id="password">
+            <small class="error-message" id="password-error" style="color:red"></small>
+          </div>
+
+          <div class="input-group">
+            <input type="password" placeholder="Confirm Password " id="confirmpassword">
+            <small class="error-message" id="confirmpassword-error" style="color:red"></small>
+          </div>
+
+          <button id="register">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import your JS file -->
+  <script type="module" src="signup.js"></script>
+</body>
+
+</html>

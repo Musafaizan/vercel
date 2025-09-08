@@ -1,0 +1,141 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+
+nav {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  padding: 0px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#033747,#012733);
+  z-index: 10;
+}
+
+nav .logo p {
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav li a {
+  font-size: 18px;  
+  text-transform: uppercase;
+  padding: 0px 30px;
+  color: #80d4ed;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav li a:hover {
+  color: aliceblue;
+  transition: all 0.3s ease 0s;
+}
+
+
+.image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+
+.heading {
+  position: absolute;
+  top: 100px;       
+  left: 50px;      
+ 
+  text-align:left ;
+}
+
+ .hero .heading h2{
+  font-size: 40px;
+  font-weight: bold;
+  color: #bbd4dc;
+  text-align:left;
+  margin-left: 0%;
+}
+
+
+.form-container {
+    background-color:#bbd4dc  ;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    margin: 10px auto; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; 
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc; 
+    border-radius: 8px; 
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-container div {
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); 
+    outline: none; 
+}
+#register {
+  background-color: #6c929e; 
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+#register:hover {
+  background-color: #5d8591; 
+}
+
+#register:active {
+  background-color: #68b3c9;
+  box-shadow: 0 5px #666; 
+  transform: translateY(4px); 
+}
+#register {
+  
+  box-shadow: 0 9px #999;
+}
