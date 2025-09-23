@@ -1,5 +1,4 @@
 
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
@@ -14,7 +13,6 @@ const firebaseConfig = {
   appId: "1:704911379731:web:372a899cbf0a315d4a1ee6",
   measurementId: "G-VHHVKPT5MY"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -34,12 +32,12 @@ const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
 const confirmPasswordError = document.getElementById("confirmpassword-error");
 
-
+// Clear error messages
 function clearErrors() {
   document.querySelectorAll(".error-message").forEach(el => (el.textContent = ""));
 }
 
-
+// Register button click
 registerButton.addEventListener("click", async (event) => {
   event.preventDefault();
   clearErrors();
@@ -112,6 +110,6 @@ registerButton.addEventListener("click", async (event) => {
     }
   }
   if(isValid == true){
-    alert("Registration Successful")
+    alert("Registration Successful,go to Log-in")
   }
 });

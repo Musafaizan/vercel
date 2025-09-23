@@ -1,0 +1,223 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #033747, #012733);
+  min-height: 100vh;           
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;             
+  overflow: hidden;
+}
+
+.container {
+  width: 900px;
+  height: 500px;               
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px) saturate(180%);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.card {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.left {
+  width: 30%;
+  background: linear-gradient(180deg, #27708f, #1f5b74);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  box-shadow: inset -3px 0 12px rgba(0,0,0,0.3);
+}
+
+.user {
+  padding: 18px 20px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.user:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(6px);
+}
+
+.user.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  box-shadow: inset 4px 0 0 #fff;
+}
+
+.right {
+  width: 70%;
+  background: linear-gradient(180deg, #76bcda, #5fadcf);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.right .messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #033747 #5fadcf;
+}
+
+.right .messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right .messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #033747, #085971);
+  border-radius: 10px;
+}
+
+.message {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 75%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  animation: popIn 0.35s ease;
+  position: relative;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.message.user {
+  background: linear-gradient(135deg, #033747, #085971);
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 4px 10px rgba(3, 55, 71, 0.6);
+}
+
+.message.admin {
+  background: rgba(255,255,255,0.9);
+  color: #033747;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+}
+
+.message::after {
+  content: attr(data-time);
+  position: absolute;
+  bottom: -18px;
+  right: 10px;
+  font-size: 11px;
+  color: rgba(0,0,0,0.5);
+  font-style: italic;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s;
+}
+
+.chat-input input:focus {
+  box-shadow: 0 0 10px rgba(3, 55, 71, 0.6);
+  transform: scale(1.02);
+}
+
+.chat-input button {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #033747, #0a6f8f);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.chat-input button:hover {
+  background: linear-gradient(135deg, #0a6f8f, #11a1d3);
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+
+.cha-input button:active {
+  transform: scale(0.95);
+}
+
+.chat-input i {
+  pointer-events: none;
+}
+.right {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;   /* scrollable */
+  height: 400px;      /* adjust based on your layout */
+}
+
+.user {
+  padding: 10px;
+  margin: 5px 0;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.user:hover {
+  background: #555;
+}

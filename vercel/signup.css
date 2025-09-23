@@ -105,8 +105,9 @@ input[type="password"] {
     color: #333;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    border-right: 50px;
+    text-align: center;
 }
-
 .form-container div {
     margin-bottom: 20px;
 }
@@ -136,6 +137,30 @@ input:focus {
   transform: translateY(4px); 
 }
 #register {
+  
+  box-shadow: 0 9px #999;
+}
+#gotologin {
+  background-color: #6c929e; 
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+#gotologin:hover {
+  background-color: #5d8591; 
+}
+
+#gotologin:active {
+  background-color: #68b3c9;
+  box-shadow: 0 5px #666; 
+  transform: translateY(4px); 
+}
+#gotologin {
   
   box-shadow: 0 9px #999;
 }
